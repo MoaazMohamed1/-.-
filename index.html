@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+</style>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>موقع جميل</title>
+</head>
+<body>
+  <nav>
+    <h1 class="title">موقع جميل</h1>
+  </nav>
+
+  <main>
+    <section class="post-creator">
+      <textarea id="content-input" placeholder="شارك أفكارك..."></textarea>
+      <div class="input-group">
+      <label for="file-input" class="custom-file-label">
+ اختر ملف
+</label>
+<input type="file" id="file-input">
+        <input type="url" id="link-input" placeholder="ضع رابط هنا">
+        <button id="add-post-button"><i class="fas fa-paper-plane"></i> </button>
+      </div>
+    </section>
+
+
+<section class="search-section">
+  <input type="text" id="search-input" placeholder="ابحث عن منشور..." />
+</section>
+
+
+    <section id="post-list" class="post-list">
+      <h2><i class="fas fa-list"></i> المنشورات</h2>
+    </section>
+  </main>
+<div id="delete-modal" class="modal">
+  <div class="modal-content">
+    <h2>هل أنت متأكد من الحذف؟</h2>
+    <p>لن يمكنك استعادة المنشور بعد حذفه.</p>
+    <div class="modal-buttons">
+      <button id="confirm-delete" class="confirm-button">تأكيد</button>
+      <button id="cancel-delete" class="cancel-button">إلغاء</button>
+    </div>
+  </div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

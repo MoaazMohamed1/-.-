@@ -1,0 +1,383 @@
+/* إعداد الخطوط والألوان */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* التنسيق العام للترويسة */
+nav {
+  background-color: black;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+}
+
+nav h1 {
+  color: #e94560;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav h1:hover {
+  color: #f4a300;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+}
+
+.post-creator {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  font-family: "Noto Sans Arabic", serif;
+  width: 100%;
+  height: 80px;
+  background-color: #1b1b2f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  font-size: 1rem;
+}
+
+textarea::placeholder {
+  color: #a5a5a5;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+input[type="file"], input[type="url"] {
+  font-family: "Noto Sans Arabic", serif;
+  background-color: #1B1B2F;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+button {
+  background-color: #FF8300;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.3s ease;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+button:hover {
+  background-color: #FF830000;
+  transform: scale(1.05);
+}
+
+button i {
+  margin-right: 5px;
+}
+
+.post-list {
+  background-color: black;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.post {
+  background-color: black;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid #444; /* الخط الفاصل بين العناصر */
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.post p {
+  font-family: "Noto Sans Arabic", serif;
+  text-align: right;
+  color: white;
+  font-weight: 500;
+}
+
+.post img, .post video {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.post img:hover, .post video:hover {
+  transform: scale(1.05);
+}
+
+.post a {
+  font-family: "Noto Sans Arabic", serif;
+  display: block;
+  color: blue;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}
+
+/* زر الحذف الذي يظهر عند تمرير الفأرة */
+.delete-button {
+  background-color: #E9456000;
+  color: red;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative; /* تغيير الـ position إلى relative */
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: none; /* إخفاء الزر افتراضيًا */
+  margin-top: 10px; /* إضافة مسافة بين الزر والمحتوى */
+}
+
+.post:hover .delete-button {
+  display: block; /* إظهار الزر عند تمرير الفأرة على العنصر */
+}
+
+.title {
+  font-family: "Noto Sans Arabic", serif;
+  color: #FF8300;
+}
+
+
+
+
+
+
+
+
+.modal {
+  font-family: "Noto Sans Arabic", serif;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1b1b2f;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button {
+  font-family: "Noto Sans Arabic", serif;
+  background-color: red;
+  color: white;
+}
+
+.cancel-button {
+  font-family: "Noto Sans Arabic", serif;
+  background-color: #444;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #d7324e;
+}
+
+.cancel-button:hover {
+  background-color: #666;
+}
+
+/* تنسيق قسم البحث */
+.search-section {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+}
+
+#search-input {
+  font-family: "Noto Sans Arabic", serif;
+  width: 90%;
+  padding: 1px 14px;
+  background-color: #1b1b2f;
+  color: #fff;
+  border: 2px solid #1b1b2f;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#search-input::placeholder {
+  color: #a5a5a5;
+}
+
+
+
+/* تنسيق الحاوية التي تحتوي على الأزرار */
+.buttons-container {
+  display: flex;
+  gap: 10px; /* المسافة بين الأزرار */
+  align-items: center; /* محاذاة الأزرار بنفس المستوى */
+  justify-content: flex-start; /* محاذاة الأزرار إلى اليسار */
+}
+
+/* زر الحذف */
+.delete-button {
+  background-color: #E9456000;
+  color: red;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: none;
+  margin-top: 10px;
+}
+
+/* زر التعديل */
+.edit-button {
+  background-color: #4CAF5000;
+  color: #FF9C03;
+  border: none;
+  padding: 0px 0px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+  margin-left: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #45A04900;
+}
+
+.edit-button:active {
+  background-color: #8E383800;
+}
+
+.post:hover .delete-button, .post:hover .edit-button {
+  display: inline-block; /* إظهار الأزرار عند التمرير فوق العنصر */
+}
+
+
+
+
+
+
+/* إخفاء الزر الافتراضي */
+#file-input {
+  display: none;
+}
+
+/* تصميم الزر البارز */
+.custom-file-label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 15px;
+  border: 1px dotted #FF8300; /* حدود نقطية */
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Noto Sans Arabic", serif;
+  color: #a5a5a5;
+  width: 100%;
+  max-width: 400px;
+  background-color: #1b1b2f;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
+
+.custom-file-label:hover {
+  border-color: #FF8300;
+  background-color: rgba(76, 175, 80, 0.1); /* تأثير خلفية عند التمرير */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التحويم */
+}
+
+.custom-file-label:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تقليل الظل عند الضغط */
+}
+
+.custom-file-label i {
+  font-size: 16px;
+  color: #4CAF50;
+}
+
+.custom-file-label span {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 400;
+  color: #777;
+}
