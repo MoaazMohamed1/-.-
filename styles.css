@@ -137,6 +137,7 @@ button i {
   text-align: right;
   color: white;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .post img, .post video {
