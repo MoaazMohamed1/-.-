@@ -393,7 +393,7 @@ button i {
 }
 
 .post .description {
-  font-size: 0.6em; /* حجم النص للوصف أصغر */
+  font-size: 0.7em; /* حجم النص للوصف أصغر */
   color: white; /* اللون الرمادي لتحديد الوصف */
 }
 
