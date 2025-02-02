@@ -388,12 +388,12 @@ button i {
 
 
 .post .content {
-  font-size: 1.1em; /* حجم النص للمحتوى */
+  font-size: 0.9em; /* حجم النص للمحتوى */
   font-weight: bold; /* جعل النص أكثر وضوحًا */
 }
 
 .post .description {
-  font-size: 0.8em; /* حجم النص للوصف أصغر */
+  font-size: 0.6em; /* حجم النص للوصف أصغر */
   color: white; /* اللون الرمادي لتحديد الوصف */
 }
 
@@ -412,7 +412,7 @@ button i {
 .read-more {
   color: #007bff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   display: block;
   margin-top: 5px;
 }
