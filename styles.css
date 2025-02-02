@@ -137,7 +137,7 @@ button i {
   text-align: right;
   color: white;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .post img, .post video {
@@ -381,4 +381,38 @@ button i {
   text-align: center;
   font-weight: 400;
   color: #777;
+}
+
+
+
+
+
+.post .content {
+  font-size: 1.1em; /* حجم النص للمحتوى */
+  font-weight: bold; /* جعل النص أكثر وضوحًا */
+}
+
+.post .description {
+  font-size: 0.8em; /* حجم النص للوصف أصغر */
+  color: white; /* اللون الرمادي لتحديد الوصف */
+}
+
+
+
+
+
+
+.description.short-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* عرض 3 أسطر فقط */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
 }
