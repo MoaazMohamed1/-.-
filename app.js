@@ -67,7 +67,7 @@ function createPostElement(post) {
     postDiv.appendChild(descriptionPara);
 
     const readMoreLink = document.createElement("span");
-    readMoreLink.textContent = "قراءة المزيد...";
+    readMoreLink.textContent = "...قراءة المزيد";
     readMoreLink.classList.add("read-more");
     postDiv.appendChild(readMoreLink);
 
